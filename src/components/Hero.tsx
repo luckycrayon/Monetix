@@ -22,6 +22,15 @@ export default function Hero() {
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
             Trade synthetic assets on-chain with infinite liquidity. Access real-world assets and optimize your DeFi strategy.
           </p>
+          
+          {/* <p className="text-xl text-gray-400 max-w-4xl mx-auto mb-8">
+            Monetix Protocol is a next-generation decentralized platform designed to seamlessly bridge traditional finance and the digital economy. Built on Monad blockchain, Monetix offers users an innovative way to mint and trade synthetic assets that track the value of real-world and digital assets alike. Whether it’s fiat currencies, commodities, global stock indexes like the S&P 500, or major cryptocurrencies like Bitcoin, Monetix enables investors to go long or short on these assets from anywhere in the world.
+            <br /><br />
+            With a commitment to transparency, liquidity, and security, Monetix Protocol leverages the speed and scalability of EVM-compatible infrastructure to provide a frictionless, low-fee trading experience. By joining Monetix, users gain access to a powerful suite of tools that simplify asset issuance, trading, and risk management, making it easy to create a diversified portfolio that captures opportunities in both real and digital markets.
+            <br /><br />
+            Monetix is more than just a platform; it’s an ecosystem where decentralized finance meets the real world. Our protocol empowers users with unique financial tools and a gateway to global assets, removing geographical, financial, and technical barriers that often restrict access to traditional markets. We are dedicated to revolutionizing asset trading by bridging the best of both worlds — decentralization and real-world asset exposure.
+          </p> */}
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-medium transition-all flex items-center justify-center">
               Launch App
