@@ -1,38 +1,37 @@
 import React from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navbar() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <nav className="fixed w-full bg-black/90 backdrop-blur-md z-50">
+    <nav className="fixed w-full z-50 bg-black/50 backdrop-blur-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
+            {/* <a href="/" className="flex items-center">
+              <span className="text-white text-xl font-bold">Monetix</span>
+            </a> */}
             <div className="flex-shrink-0">
               <span className="text-blue-500 text-2xl font-bold">Monetix</span>
             </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <a href="#" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Products</a>
-                <a href="#" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Developers</a>
-                <a href="#" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Governance</a>
-                <a href="#" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Resources</a>
-              </div>
-            </div>
           </div>
-          <div className="hidden md:block">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition-all">
-              Launch App
-            </button>
+          
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="/" className="text-gray-300 hover:text-white">{t('nav.home')}</a>
+            <a href="/trade" className="text-gray-300 hover:text-white">{t('nav.trade')}</a>
+            <a href="/stake" className="text-gray-300 hover:text-white">{t('nav.stake')}</a>
+            <a href="/docs" className="text-gray-300 hover:text-white">{t('nav.docs')}</a>
           </div>
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white"
-            >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
+
+          <div className="flex items-center space-x-4">
+            <LanguageSwitcher />
+            {/* <button className="bg-blue-600 px-4 py-2 rounded-full">
+              {t('wallet.connect')}
+            </button> */}
           </div>
         </div>
       </div>
